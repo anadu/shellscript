@@ -1,6 +1,5 @@
 #!/bin/bash
-NUM1=20
-NUM2=30
-SUM =$((NUM1+NUM2))
-
+NUM1=$1
+NUM2=$2
+SUM =$(($NUM1+$NUM2))
 echo "addition value is $SUM"

@@ -7,6 +7,3 @@ then
 yum install git -y
 echo $?
 
-yum install mysql -y
-
-echo $?

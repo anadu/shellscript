@@ -3,9 +3,9 @@ USERID=$(id -u)
 validate(){
     if [ $1 -ne 0 ]
     then
-      echo "$2 -- sucess"
+      echo "$2 -- failure"
     else
-      echo "$2-- failure"  
+      echo "$2-- sucess"  
     fi   
   }
 

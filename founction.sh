@@ -11,9 +11,11 @@ VALIDATE(){
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0 ]
+if [ $USERID -eq 0 ]
 then
     echo "ERROR:: Please run this script with root access"
+    echo "the number of argunemnts $#"
+    echo "the number of variables $@"
     exit 1
 # else
 #     echo "INFO:: You are root user"
@@ -24,7 +26,7 @@ yum install mysql -y &>>$LOGFILE
 
 VALIDATE $? "Installing MySQL"
 echo "the number of argunemnts $#"
-echo " the number of variables $@"
+echo "the number of variables $@"
 
 yum install posddtfix -y &>>$LOGFILE
 

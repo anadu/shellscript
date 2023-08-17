@@ -18,7 +18,7 @@ else
    echo " mysql sucess"
 fi 
 
-yum install maven -y
+yum install mavenn -y
 
 if [ $? -ne 0 ]
 then 

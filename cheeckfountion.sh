@@ -19,13 +19,7 @@ fi
 
 yum install mysql -y
 validate $? "mysql"
-if [ $? -ne 0 ]
-then 
-   echo "mysql error"
-   exit 1
-else
-   echo " mysql sucess"
-fi 
+
 
 yum install maven -y
 

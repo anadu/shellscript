@@ -16,5 +16,15 @@ then
    exit 1
 else
    echo " mysql sucess"
+fi 
+
+yum install maven -y
+
+if [ $? -ne 0 ]
+then 
+   echo "install the maven failure"
+   exit 1
+else
+   echo "install the maven is sucess"  
 fi   
 

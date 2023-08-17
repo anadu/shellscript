@@ -1,5 +1,13 @@
 #!/bin/bash
 USERID=$(id -u)
+validate(){
+    if [ $1 -ne 0 ]
+    then
+      echo "$2 -- sucess"
+    else
+      echo "$2-- failure"  
+    fi   
+  }
 
 if [ $USERID -ne 0 ]
 then
@@ -10,6 +18,7 @@ fi
 
 
 yum install mysql -y
+validate $? "mysql"
 if [ $? -ne 0 ]
 then 
    echo "mysql error"
@@ -20,11 +29,4 @@ fi
 
 yum install maven -y
 
-if [ $? -ne 0 ]
-then 
-   echo "install the maven failure"
-   exit 1
-else
-   echo "install the maven is sucess"  
-fi   
-
+validate $? "maven"

@@ -12,6 +12,7 @@ yum install git -y
 if [ $? -ne 0 ]
 then 
    echo "git sucess"
+   exit 1
 else
    echo "git failure"
 fi   
@@ -20,7 +21,8 @@ yum install mysql -y
 if [ $? -ne 0 ]
 then 
    echo "mysql sucess"
+   exit 1
 else
-   echo " git failure"
+   echo " mysql failure"
 fi   
 

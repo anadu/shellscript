@@ -1,4 +1,7 @@
 #!/bin/bash
+DATE=$(date +%F)
+script_name=$0
+LOG_FILE=/tmp/$scriptname-$DATE
 USERID=$(id -u)
 validate(){
     if [ $1 -ne 0 ]
@@ -17,10 +20,10 @@ fi
 
 
 
-yum install mysql -y
+yum install mysql -y >>$LOG_FILE
 validate $? "mysql"
 
 
-yum install maven -y
+yum install maven -y >>$LOG_FILE
 
 validate $? "maven"

@@ -1,7 +1,7 @@
 #!/bin/bash
 DATE=$(date +%F)
 script_name=$0
-LOG_FILE=/tmp/$scriptname-$DATE
+LOG_FILE=/tmp/$0-$DATE
 USERID=$(id -u)
 validate(){
     if [ $1 -ne 0 ]

@@ -3,7 +3,7 @@ APP_LOG=/home/centos/app-logs
 
 DATE=$(date +%F:%H:%M:%S)
 
-LOG_DIR= /home/centos/shellscript-logs
+LOG_DIR=/home/centos/shellscript-logs
 
 LOG_FILE=$LOG_DIR/$0-$DATE.log
 

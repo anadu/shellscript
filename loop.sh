@@ -20,6 +20,13 @@ validate(){
 
 for i in $@
 do 
+   yum list installed $@
+   if [ $? -ne 0 ]
+   then
+      echo "failure"
+   else
+      echo "sucess"
+   fi      
    yum install $i -y
    validate $? "$i"
 
